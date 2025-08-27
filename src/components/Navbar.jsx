@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Github } from "lucide-react"; // icon GitHub
 import logo from "@assets/logo.png"; // nhớ bỏ logo của bạn vào src/assets/logo.png
 
 const Navbar = () => {
@@ -33,14 +34,16 @@ const Navbar = () => {
           ></span>
         </a>
 
-        {/* Invite Button */}
+        {/* GitHub */}
         <a
-          href="https://discord.com/oauth2/authorize?client_id=1382559506885775360"
-          className="bg-gradient-to-r from-emerald-500 to-emerald-400 text-white 
-                     px-5 py-2 rounded-xl font-semibold shadow-md 
-                     hover:shadow-emerald-500/50 hover:scale-105 transition"
+          href="https://github.com/DuyPhatpeo/DinoBotDiscord"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 border border-emerald-500 px-4 py-2 rounded-xl 
+                     font-semibold text-emerald-400 hover:bg-gray-800 hover:scale-105 transition"
         >
-          Invite Bot
+          <Github className="w-5 h-5" />
+          GitHub
         </a>
       </div>
     </motion.nav>
