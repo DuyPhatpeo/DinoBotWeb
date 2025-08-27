@@ -35,7 +35,7 @@ const Navbar = () => {
 
         {/* Invite Button */}
         <a
-          href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=8&scope=bot"
+          href="https://discord.com/oauth2/authorize?client_id=1382559506885775360"
           className="bg-gradient-to-r from-emerald-500 to-emerald-400 text-white 
                      px-5 py-2 rounded-xl font-semibold shadow-md 
                      hover:shadow-emerald-500/50 hover:scale-105 transition"

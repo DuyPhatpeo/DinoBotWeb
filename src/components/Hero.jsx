@@ -5,7 +5,7 @@ import { UserPlus, LifeBuoy } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center gap-20 py-20 px-6 max-w-7xl mx-auto">
+    <section className="flex flex-col md:flex-row items-center justify-center gap-20 px-6 max-w-7xl mx-auto min-h-screen">
       {/* Text bên trái */}
       <motion.div
         initial={{ x: -50, opacity: 0 }}
@@ -59,7 +59,7 @@ const Hero = () => {
         <img
           src={logo}
           alt="DinoBot Logo"
-          className="w-72 h-72 md:w-96 md:h-96 drop-shadow-[0_0_30px_#34d399]"
+          className="w-72 h-72 md:w-[28rem] md:h-[28rem] drop-shadow-[0_0_40px_#34d399]"
         />
       </motion.div>
     </section>
