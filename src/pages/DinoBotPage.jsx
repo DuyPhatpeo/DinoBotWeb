@@ -1,10 +1,17 @@
-import React from "react";
+import Features from "@components/Features";
+import Footer from "@components/Footer";
+import Hero from "@components/Hero";
+import Navbar from "@components/Navbar";
+import React, { Fragment } from "react";
 
 const DinoBotPage = () => {
   return (
-    <div>
-      <h1 className="text-4xl font-bold text-emerald-500">DinoBot Page</h1>
-    </div>
+    <Fragment>
+      <Navbar></Navbar>
+      <Hero></Hero>
+      <Features></Features>
+      <Footer></Footer>
+    </Fragment>
   );
 };
 
