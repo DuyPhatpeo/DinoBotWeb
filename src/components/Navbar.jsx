@@ -16,7 +16,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#080B11]/85 border-b border-white/[0.08]">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#171a21]/90 border-b border-[#2b3042]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         {/* Logo & Brand */}
         <Link to="/" className="flex items-center gap-3 group">
@@ -56,7 +56,7 @@ const Navbar = () => {
             href={BOT_LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700/80 text-slate-200 hover:text-white hover:border-slate-600 text-sm font-semibold transition hover:scale-105 shadow-sm"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#202430] border border-[#2e3448] text-slate-200 hover:text-white hover:border-slate-500 text-sm font-semibold transition hover:scale-105 shadow-sm"
           >
             <Github className="w-4 h-4" />
             <span>GitHub</span>
@@ -85,7 +85,7 @@ const Navbar = () => {
           </a>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-white"
+            className="p-2.5 rounded-xl bg-[#202430] border border-[#2e3448] text-slate-200 hover:text-white"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -100,7 +100,7 @@ const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="sm:hidden border-b border-slate-800 bg-[#0B0F19] px-6 py-5 space-y-2"
+            className="sm:hidden border-b border-[#2b3042] bg-[#171a21] px-6 py-5 space-y-2"
           >
             {NAV_LINKS.map((link) => (
               <NavLink
@@ -111,7 +111,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `block font-semibold text-base py-2 px-3 rounded-lg ${
                     isActive
-                      ? "text-emerald-400 bg-emerald-500/10"
+                      ? "text-emerald-400 bg-emerald-500/10 border border-emerald-500/20"
                       : "text-slate-300 hover:text-white"
                   }`
                 }
@@ -119,12 +119,12 @@ const Navbar = () => {
                 {link.name}
               </NavLink>
             ))}
-            <div className="pt-3 border-t border-slate-800 flex gap-3">
+            <div className="pt-3 border-t border-[#2b3042] flex gap-3">
               <a
                 href={BOT_LINKS.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 text-center py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-sm font-semibold"
+                className="flex-1 text-center py-2.5 rounded-xl bg-[#202430] border border-[#2e3448] text-slate-200 text-sm font-semibold"
               >
                 GitHub
               </a>
@@ -132,7 +132,7 @@ const Navbar = () => {
                 href={BOT_LINKS.support}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 text-center py-2.5 rounded-xl bg-slate-800 text-emerald-400 text-sm font-semibold"
+                className="flex-1 text-center py-2.5 rounded-xl bg-[#202430] border border-emerald-500/30 text-emerald-400 text-sm font-semibold"
               >
                 Hỗ Trợ
               </a>

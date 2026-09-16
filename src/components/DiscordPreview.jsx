@@ -27,7 +27,7 @@ const DiscordPreview = () => {
   return (
     <div className="w-full max-w-xl mx-auto">
       {/* Command tabs */}
-      <div className="flex items-center gap-1.5 p-1 mb-3 rounded-2xl bg-slate-900/90 border border-slate-800/80 backdrop-blur-md overflow-x-auto text-xs">
+      <div className="flex items-center gap-1.5 p-1 mb-3 rounded-2xl bg-[#202430] border border-[#2b3040] backdrop-blur-md overflow-x-auto text-xs">
         {SIMULATOR_TABS.map((tab) => {
           const isSelected = activeTab.id === tab.id;
           return (

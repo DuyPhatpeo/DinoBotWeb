@@ -11,46 +11,46 @@ const Faq = () => {
   };
 
   return (
-    <section id="faq" className="py-20 px-6 relative z-10">
+    <section id="faq" className="py-12 px-4 sm:px-6 relative z-10">
       <div className="max-w-3xl mx-auto">
-        {/* Section Header: Text focused */}
+        {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2 block">
+          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2 block">
             Hỏi & Đáp
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-3">
             Câu Hỏi <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Thường Gặp</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base">
-            Những thông tin cần biết trước khi đưa DinoBot vào máy chủ.
+          <p className="text-slate-300 text-sm sm:text-base">
+            Những thông tin cần biết trước khi đưa DinoBot vào máy chủ của bạn.
           </p>
         </div>
 
         {/* Accordion List */}
-        <div className="space-y-3">
+        <div className="space-y-3.5">
           {FAQ_DATA.map((item, idx) => {
             const isOpen = openIndex === idx;
             return (
               <div
                 key={idx}
-                className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
+                className={`rounded-2xl border transition-all duration-200 overflow-hidden shadow-md ${
                   isOpen
-                    ? "bg-slate-900/80 border-emerald-500/40"
-                    : "bg-slate-900/40 border-slate-800/80 hover:border-slate-700"
+                    ? "bg-[#202430] border-emerald-500/40 shadow-emerald-950/20"
+                    : "bg-[#202430] border-[#2b3040] hover:border-[#3a4055]"
                 }`}
               >
                 <button
                   onClick={() => toggle(idx)}
                   className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer select-none"
                 >
-                  <span className="text-sm sm:text-base font-semibold text-white">
+                  <span className="text-sm sm:text-base font-bold text-white">
                     {item.q}
                   </span>
                   <div
                     className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${
                       isOpen
-                        ? "text-emerald-400 rotate-180"
-                        : "text-slate-500"
+                        ? "text-emerald-400 rotate-180 bg-emerald-500/10"
+                        : "text-slate-400"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -65,7 +65,7 @@ const Faq = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <div className="px-5 pb-5 pt-1 text-slate-400 text-xs sm:text-sm leading-relaxed border-t border-white/5">
+                      <div className="px-5 pb-5 pt-1 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-[#2b3040]">
                         {item.a}
                       </div>
                     </motion.div>
@@ -76,19 +76,19 @@ const Faq = () => {
           })}
         </div>
 
-        {/* Support helper: Icon used -> Short button text */}
-        <div className="mt-8 p-5 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <p className="text-slate-400 text-xs sm:text-sm">
-            Cần hỗ trợ thêm về bot? Tham gia server Discord để được trợ giúp.
+        {/* Support helper */}
+        <div className="mt-8 p-6 rounded-3xl bg-[#202430] border border-[#2b3040] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-xl">
+          <p className="text-slate-300 text-xs sm:text-sm">
+            Cần hỗ trợ thêm về bot? Tham gia máy chủ Discord để được hỗ trợ nhanh nhất.
           </p>
           <a
             href={BOT_LINKS.support}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 text-xs font-semibold flex items-center gap-2 transition flex-shrink-0"
+            className="px-5 py-2.5 rounded-xl bg-[#171a21] hover:bg-emerald-500 hover:text-slate-950 text-emerald-400 border border-[#2b3040] text-xs font-bold flex items-center gap-2 transition flex-shrink-0"
           >
-            <MessageSquare className="w-3.5 h-3.5" />
-            <span>Hỗ Trợ</span>
+            <MessageSquare className="w-4 h-4" />
+            <span>Tham Gia Hỗ Trợ</span>
           </a>
         </div>
       </div>

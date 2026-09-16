@@ -22,7 +22,7 @@ const HomePage = () => {
         <div className="text-center -mt-8 mb-20 relative z-10">
           <Link
             to="/features"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-slate-900 border border-slate-700/80 text-emerald-400 hover:text-emerald-300 hover:border-emerald-500/40 text-sm font-semibold transition hover:scale-105 shadow-sm"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#202430] border border-[#2b3040] text-emerald-400 hover:text-emerald-300 hover:border-emerald-500/40 text-sm font-bold transition hover:scale-105 shadow-md"
           >
             <span>Khám phá chi tiết các tính năng</span>
             <ArrowRight className="w-4 h-4" />

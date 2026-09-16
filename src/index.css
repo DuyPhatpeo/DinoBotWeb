@@ -6,24 +6,24 @@
   }
   
   body {
-    background-color: #080B11;
-    color: #F1F5F9;
+    background-color: #171a21;
+    color: #F3F4F6;
     overflow-x: hidden;
   }
 
-  /* Custom sleek dark scrollbar */
+  /* Custom sleek scrollbar matching MEE6 dark slate & Emerald */
   ::-webkit-scrollbar {
     width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #080B11;
+    background: #171a21;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #1e293b;
+    background: #2b3042;
     border-radius: 9999px;
-    border: 2px solid #080B11;
+    border: 2px solid #171a21;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -31,23 +31,46 @@
   }
 }
 
+/* MEE6 Dark Slate Navy Card & Panel System */
+.mee6-card {
+  background-color: #202430;
+  border: 1px solid #2b3040;
+}
+
+.mee6-card-subtle {
+  background-color: rgba(32, 36, 48, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mee6-card-glow {
+  background-color: #202430;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.18);
+}
+
 /* Glassmorphism helpers */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.65);
+  background: rgba(32, 36, 48, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-panel-glow {
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(32, 36, 48, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.25);
   box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.15);
 }
 
-/* Discord brand background highlight */
-.discord-blurple-glow {
-  box-shadow: 0 0 30px -5px rgba(88, 101, 242, 0.25);
+/* Ambient Radial Mesh Gradients */
+.mee6-ambient-bg {
+  background: 
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(16, 185, 129, 0.13), transparent 70%),
+    radial-gradient(circle at 90% 25%, rgba(20, 184, 166, 0.07), transparent 45%),
+    radial-gradient(circle at 10% 60%, rgba(16, 185, 129, 0.06), transparent 50%),
+    #171a21;
 }

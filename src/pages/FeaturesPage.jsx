@@ -24,7 +24,7 @@ const iconMap = {
 
 const FeaturesPage = () => {
   return (
-    <div className="py-12 px-6">
+    <div className="py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 pt-4">
@@ -34,7 +34,7 @@ const FeaturesPage = () => {
           <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-5">
             Mọi Công Cụ Cho Máy Chủ Của Bạn
           </h1>
-          <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
+          <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
             DinoBot tích hợp sẵn các module quản trị, trò chơi nút bấm và tiện ích cộng đồng mà không cần cài đặt nhiều bot phức tạp.
           </p>
         </div>
@@ -49,11 +49,16 @@ const FeaturesPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: idx * 0.08 }}
-                className={`p-7 rounded-3xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between ${module.borderGlow} hover:shadow-xl hover:shadow-emerald-950/20`}
+                className="p-7 rounded-3xl bg-[#202430] border border-[#2b3040] hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between shadow-xl shadow-black/20"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-5">
-                    <IconComponent className="w-6 h-6" />
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                    <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+                      SẴN SÀNG
+                    </span>
                   </div>
 
                   <h2 className="text-xl font-bold text-white mb-3">
@@ -64,7 +69,7 @@ const FeaturesPage = () => {
                     {module.desc}
                   </p>
 
-                  <div className="pt-4 border-t border-slate-800/60">
+                  <div className="pt-4 border-t border-[#2b3040]">
                     <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-3">
                       Chi tiết bao gồm:
                     </span>
@@ -84,7 +89,7 @@ const FeaturesPage = () => {
         </div>
 
         {/* Next Steps: Link to Commands & Add to Discord */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900/90 to-slate-950 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left mb-12">
+        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#202430] to-[#1a1d26] border border-[#2b3040] flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left mb-12 shadow-xl">
           <div>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
               Xem toàn bộ cú pháp lệnh
@@ -97,10 +102,10 @@ const FeaturesPage = () => {
           <div className="flex items-center gap-3.5 flex-shrink-0">
             <Link
               to="/commands"
-              className="flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold transition"
+              className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#171a21] border border-[#2b3040] hover:border-emerald-500/40 text-white text-sm font-semibold transition"
             >
               <span>Tra cứu lệnh</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-emerald-400" />
             </Link>
 
             <a

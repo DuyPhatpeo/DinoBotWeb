@@ -10,7 +10,7 @@ import Footer from "@components/Footer";
 
 const DinoBotPage = () => {
   return (
-    <div className="min-h-screen bg-[#080B11] text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-slate-950 font-sans">
+    <div className="min-h-screen bg-[#171a21] text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-slate-950 font-sans">
       {/* Header */}
       <Navbar />
 

@@ -12,7 +12,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-[#080B11] text-slate-100 selection:bg-emerald-500 selection:text-slate-950 font-sans flex flex-col justify-between overflow-x-hidden">
+      <div className="min-h-screen bg-[#171a21] mee6-ambient-bg text-slate-100 selection:bg-emerald-500 selection:text-slate-950 font-sans flex flex-col justify-between overflow-x-hidden">
         <Navbar />
         <main className="flex-grow">
           <Routes>

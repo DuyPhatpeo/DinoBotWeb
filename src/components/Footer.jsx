@@ -6,7 +6,7 @@ import { Github, MessageSquare } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-slate-800/80 bg-[#06080E] text-slate-400 text-xs sm:text-sm relative z-10">
+    <footer className="border-t border-[#2b3040] bg-[#12141a] text-slate-400 text-xs sm:text-sm relative z-10">
       <div className="max-w-7xl mx-auto px-6 pt-12 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
           {/* Brand Column (Span 2) */}
