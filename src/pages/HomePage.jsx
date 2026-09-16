@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Stats from "../components/Stats";
+import DiscordPreview from "../components/DiscordPreview";
 import Features from "../components/Features";
 import CtaSection from "../components/CtaSection";
 import { ArrowRight } from "lucide-react";
@@ -9,11 +10,27 @@ import { ArrowRight } from "lucide-react";
 const HomePage = () => {
   return (
     <div>
-      {/* Hero Section with Interactive Discord Preview */}
+      {/* Jockie Music style Hero Banner */}
       <Hero />
 
       {/* Live Server Stats */}
       <Stats />
+
+      {/* Interactive Discord Simulation Section */}
+      <section className="py-12 px-4 sm:px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center mb-8">
+          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2 block">
+            Trải Nghiệm Trực Tiếp
+          </span>
+          <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
+            Thử Nghiệm Lệnh Tương Tác
+          </h2>
+          <p className="text-slate-400 text-sm sm:text-base mt-2">
+            Bấm chọn các tab lệnh bên dưới để xem DinoBot phản hồi tức thì với giao diện Discord
+          </p>
+        </div>
+        <DiscordPreview />
+      </section>
 
       {/* Core Features Overview */}
       <div className="relative">

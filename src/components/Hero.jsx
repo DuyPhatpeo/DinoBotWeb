@@ -2,94 +2,132 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BOT_LINKS } from "../data/botData";
-import DiscordPreview from "./DiscordPreview";
-import { UserPlus, Sparkles, ArrowRight } from "lucide-react";
+import logo from "../assets/logo.png";
+import { UserPlus, LifeBuoy, Zap, Github } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center pt-8 pb-20 px-4 sm:px-6 overflow-hidden">
-      {/* 1. Geometric Grid Canvas with smooth radial fade mask */}
-      <div className="absolute inset-0 hero-grid-pattern pointer-events-none opacity-60 z-0"></div>
+    <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center pt-8 pb-16 px-4 sm:px-6 overflow-hidden">
+      {/* 1. Jockie Music style Watermark Icon Pattern Wallpaper */}
+      <div className="absolute inset-0 dino-watermark-pattern pointer-events-none opacity-40 z-0"></div>
 
-      {/* 2. Top-center Light Beam / Spotlight */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1100px] h-[400px] bg-gradient-to-b from-emerald-500/20 via-teal-500/10 to-transparent rounded-full blur-[100px] pointer-events-none z-0"></div>
+      {/* 2. Soft Ambient Vignette & Center Spotlight */}
+      <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#171a21]/50 to-[#171a21] pointer-events-none z-0"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] sm:w-[1100px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
-      {/* 3. Deep Atmospheric Nebula Blobs (Emerald + Teal + Midnight Indigo) */}
-      <div 
-        className="absolute -top-16 left-6 sm:left-[18%] w-[500px] h-[500px] bg-emerald-500/15 rounded-full blur-[140px] pointer-events-none z-0 animate-pulse"
-        style={{ animationDuration: "7s" }}
-      ></div>
-
-      <div 
-        className="absolute top-1/4 -right-16 sm:right-[6%] w-[480px] h-[480px] bg-teal-500/12 rounded-full blur-[150px] pointer-events-none z-0 animate-pulse"
-        style={{ animationDuration: "9s" }}
-      ></div>
-
-      <div className="absolute -bottom-20 left-1/3 w-[600px] h-[300px] bg-[#4F46E5]/10 rounded-full blur-[160px] pointer-events-none z-0"></div>
-
-      {/* 4. Subtle Sparkling Star Accents */}
-      <div className="absolute top-24 left-[15%] w-1 h-1 bg-emerald-300 rounded-full blur-[0.5px] opacity-60 animate-ping pointer-events-none"></div>
-      <div className="absolute top-44 right-[22%] w-1.5 h-1.5 bg-teal-300 rounded-full blur-[0.5px] opacity-50 pointer-events-none"></div>
-      <div className="absolute top-72 left-[8%] w-1 h-1 bg-emerald-400 rounded-full blur-[0.5px] opacity-40 pointer-events-none"></div>
-      <div className="absolute bottom-32 right-[12%] w-1.5 h-1.5 bg-emerald-300 rounded-full blur-[0.5px] opacity-50 animate-ping pointer-events-none" style={{ animationDuration: "4s" }}></div>
-
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
-        {/* Left Column: Hero Text & Dual CTAs */}
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
+        {/* ========================================================================= */}
+        {/* Left Column: Mascot Illustration with Speed Lines (Jockie Music Style)    */}
+        {/* ========================================================================= */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="lg:col-span-5 flex items-center justify-center relative"
         >
-          {/* MEE6-style Top Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold mb-6 shadow-sm shadow-emerald-950/20 backdrop-blur-md">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Bot Discord Thế Hệ Mới Cho Cộng Đồng</span>
+          {/* Dynamic Speed Lines & Particle Accents */}
+          <div className="relative w-72 h-72 sm:w-88 sm:h-88 lg:w-96 lg:h-96 flex items-center justify-center">
+            {/* Artistic Speed Trails (Left-facing SVG dashed & curved lines) */}
+            <svg
+              className="absolute -left-10 sm:-left-16 top-1/2 -translate-y-1/2 w-64 sm:w-80 h-48 pointer-events-none select-none text-emerald-400/40"
+              viewBox="0 0 200 120"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            >
+              <path d="M 180 20 L 40 20" strokeDasharray="12 8" />
+              <path d="M 190 45 L 20 45" strokeWidth="3" />
+              <path d="M 170 70 L 30 70" strokeDasharray="16 10" />
+              <path d="M 185 95 L 50 95" strokeDasharray="8 6" />
+              {/* Floating Sparkle Symbols */}
+              <text x="70" y="15" fill="currentColor" fontSize="14" fontWeight="bold">✦</text>
+              <text x="35" y="85" fill="currentColor" fontSize="12">✦</text>
+              <text x="60" y="110" fill="currentColor" fontSize="16">✦</text>
+            </svg>
+
+            {/* Glowing Backdrop Circle */}
+            <div className="absolute w-56 h-56 sm:w-64 sm:h-64 rounded-full bg-gradient-to-tr from-emerald-500/20 to-teal-400/10 blur-2xl pointer-events-none"></div>
+
+            {/* Mascot Image with Gentle Floating Animation */}
+            <div className="relative z-10 animate-dino-float">
+              <img
+                src={logo}
+                alt="DinoBot Mascot"
+                className="w-56 h-56 sm:w-72 sm:h-72 lg:w-84 lg:h-84 object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* ========================================================================= */}
+        {/* Right Column: Giant Bold Typography & Pill Buttons (Jockie Music Style)   */}
+        {/* ========================================================================= */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6"
+        >
+          {/* Giant Bold Headline */}
+          <div className="space-y-1">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white uppercase leading-[1.08]">
+              DINOBOT
+            </h1>
+            <div className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-300 bg-clip-text text-transparent uppercase">
+              BOT DISCORD TOÀN DIỆN
+            </div>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12] mb-6">
-            Nâng Cấp Máy Chủ Discord Cùng{" "}
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-300 bg-clip-text text-transparent">
-              DinoBot
-            </span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-base sm:text-lg text-slate-300 max-w-lg mb-8 leading-relaxed font-normal">
-            Hệ thống kiểm duyệt tự động thông minh, mini games tương tác bằng nút bấm và tiện ích máy chủ chuyên nghiệp — tất cả trong một bot duy nhất.
+          {/* Subtitle / Tagline */}
+          <p className="text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed font-medium">
+            Quản trị tự động, mini games nút bấm giải trí và tiện ích cộng đồng thông minh — tất cả trong một bot duy nhất.
           </p>
 
-          {/* Dual Action Buttons */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full sm:w-auto">
+          {/* Row of Multi-Colored Pill Buttons (Jockie Music Style) */}
+          <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-3.5">
+            {/* Pill 1: MỜI BOT (Emerald) */}
             <a
               href={BOT_LINKS.invite}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-extrabold text-sm sm:text-base shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105 transition-all w-full sm:w-auto"
+              className="flex items-center gap-2.5 px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105 transition-all cursor-pointer"
             >
-              <UserPlus className="w-5 h-5 text-slate-950" />
-              <span>Thêm Vào Discord</span>
+              <UserPlus className="w-4 h-4 text-slate-950" />
+              <span>MỜI BOT</span>
             </a>
 
+            {/* Pill 2: HỖ TRỢ (Teal) */}
+            <a
+              href={BOT_LINKS.support}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 px-6 py-3 rounded-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40 hover:scale-105 transition-all cursor-pointer"
+            >
+              <LifeBuoy className="w-4 h-4 text-slate-950" />
+              <span>HỖ TRỢ</span>
+            </a>
+
+            {/* Pill 3: TÍNH NĂNG (Cyan/Indigo) */}
             <Link
               to="/features"
-              className="flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-white/10 hover:bg-white/15 text-white border border-white/15 font-bold text-sm sm:text-base hover:scale-105 transition-all w-full sm:w-auto backdrop-blur-md"
+              className="flex items-center gap-2.5 px-6 py-3 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all cursor-pointer"
             >
-              <span>Xem Tính Năng</span>
-              <ArrowRight className="w-4 h-4 text-emerald-400" />
+              <Zap className="w-4 h-4 text-slate-950" />
+              <span>TÍNH NĂNG</span>
             </Link>
-          </div>
-        </motion.div>
 
-        {/* Right Column: Live Discord Chat Simulation */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="lg:col-span-6 w-full"
-        >
-          <DiscordPreview />
+            {/* Pill 4: GITHUB (Dark Slate Navy) */}
+            <a
+              href={BOT_LINKS.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#202430] hover:bg-[#282d3d] border border-[#2e3448] text-white font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg hover:scale-105 transition-all cursor-pointer"
+            >
+              <Github className="w-4 h-4 text-emerald-400" />
+              <span>GITHUB</span>
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
