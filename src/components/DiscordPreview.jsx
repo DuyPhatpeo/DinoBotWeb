@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SIMULATOR_TABS } from "../data/botData";
 import logo from "../assets/logo.png";
-import { Hash, Sparkles, CheckCircle2, ChevronRight, Terminal } from "lucide-react";
+import { Hash, CheckCircle2, ChevronRight, Terminal } from "lucide-react";
 
 const DiscordPreview = () => {
   const [activeTab, setActiveTab] = useState(SIMULATOR_TABS[0]);
@@ -81,8 +81,7 @@ const DiscordPreview = () => {
                 <span className="font-semibold text-xs sm:text-sm text-white">DuyPhat</span>
                 <span className="text-[10px] text-slate-400">Hôm nay lúc 09:30</span>
               </div>
-              <div className="mt-0.5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#2B2D31] text-xs font-mono text-emerald-400 border border-slate-700/50">
-                <Sparkles className="w-3 h-3 text-emerald-400" />
+              <div className="mt-0.5 inline-flex items-center px-2 py-0.5 rounded-md bg-[#2B2D31] text-xs font-mono text-emerald-400 border border-slate-700/50">
                 {activeTab.userPrompt}
               </div>
             </div>
