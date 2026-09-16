@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+const logo = "/logo.png";
 import { BOT_LINKS } from "../data/botData";
 import { Github, MessageSquare } from "lucide-react";
 

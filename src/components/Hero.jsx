@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BOT_LINKS } from "../data/botData";
-import logo from "../assets/logo.png";
-import { UserPlus, LifeBuoy, Zap, Github } from "lucide-react";
+const logo = "/logo.png";
+import { UserPlus, LifeBuoy, Zap, Github, Gamepad2, Code, Settings, Plus } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -27,30 +27,30 @@ const Hero = () => {
         >
           {/* Dynamic Speed Lines & Particle Accents */}
           <div className="relative w-72 h-72 sm:w-88 sm:h-88 lg:w-96 lg:h-96 flex items-center justify-center">
-            {/* Artistic Speed Trails (Left-facing SVG dashed & curved lines) */}
-            <svg
-              className="absolute -left-10 sm:-left-16 top-1/2 -translate-y-1/2 w-64 sm:w-80 h-48 pointer-events-none select-none text-emerald-400/40"
-              viewBox="0 0 200 120"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-            >
-              <path d="M 180 20 L 40 20" strokeDasharray="12 8" />
-              <path d="M 190 45 L 20 45" strokeWidth="3" />
-              <path d="M 170 70 L 30 70" strokeDasharray="16 10" />
-              <path d="M 185 95 L 50 95" strokeDasharray="8 6" />
-              {/* Floating Sparkle Symbols */}
-              <text x="70" y="15" fill="currentColor" fontSize="14" fontWeight="bold">✦</text>
-              <text x="35" y="85" fill="currentColor" fontSize="12">✦</text>
-              <text x="60" y="110" fill="currentColor" fontSize="16">✦</text>
-            </svg>
+            {/* Speed Lines & Flying Icons */}
+            <div className="absolute -left-16 sm:-left-28 top-1/2 -translate-y-1/2 -mt-6 sm:-mt-10 w-72 sm:w-[350px] h-72 sm:h-[350px] pointer-events-none select-none rotate-[15deg] z-0">
+              {/* White Speed Lines */}
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 350 350" stroke="white" fill="none" strokeWidth="3" strokeLinecap="round">
+                <line x1="300" y1="60" x2="100" y2="60" strokeOpacity="0.7" strokeDasharray="30 15 50 15" />
+                <line x1="330" y1="120" x2="40" y2="120" strokeOpacity="0.9" strokeWidth="4.5" />
+                <line x1="280" y1="180" x2="90" y2="180" strokeOpacity="0.5" strokeDasharray="15 20 40 20" />
+                <line x1="310" y1="240" x2="60" y2="240" strokeOpacity="0.8" strokeDasharray="50 25" />
+                <line x1="270" y1="300" x2="30" y2="300" strokeOpacity="0.6" strokeWidth="3.5" />
+              </svg>
+
+              {/* Flying Icons colored like the bot (Placed in the gaps between lines) */}
+              <Gamepad2 className="absolute top-[70px] left-[140px] w-10 h-10 text-emerald-400 rotate-[20deg]" strokeWidth={2.5} />
+              <Code className="absolute top-[132px] left-[60px] w-9 h-9 text-cyan-400 rotate-[-15deg]" strokeWidth={2.5} />
+              <Settings className="absolute top-[190px] left-[130px] w-10 h-10 text-emerald-500 rotate-[45deg]" strokeWidth={2.5} />
+              <Plus className="absolute top-[78px] left-[50px] w-6 h-6 text-teal-300" strokeWidth={3} />
+              <Plus className="absolute top-[260px] left-[90px] w-5 h-5 text-emerald-400" strokeWidth={3} />
+            </div>
 
             {/* Glowing Backdrop Circle */}
             <div className="absolute w-56 h-56 sm:w-64 sm:h-64 rounded-full bg-gradient-to-tr from-emerald-500/20 to-teal-400/10 blur-2xl pointer-events-none"></div>
 
-            {/* Mascot Image with Gentle Floating Animation */}
-            <div className="relative z-10 animate-dino-float">
+            {/* Mascot Image */}
+            <div className="relative z-10 -top-2 sm:-top-4">
               <img
                 src={logo}
                 alt="DinoBot Mascot"

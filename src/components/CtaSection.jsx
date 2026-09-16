@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BOT_LINKS } from "../data/botData";
-import logo from "../assets/logo.png";
+const logo = "/logo.png";
 import { UserPlus, LifeBuoy, Sparkles } from "lucide-react";
 
 const CtaSection = () => {

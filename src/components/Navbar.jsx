@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logo.png";
+const logo = "/logo.png";
 import { BOT_LINKS } from "../data/botData";
 
 const NAV_LINKS = [

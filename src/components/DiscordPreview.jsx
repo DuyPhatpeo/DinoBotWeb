@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SIMULATOR_TABS } from "../data/botData";
-import logo from "../assets/logo.png";
+const logo = "/logo.png";
 import { Hash, CheckCircle2 } from "lucide-react";
 
 const DiscordPreview = () => {
