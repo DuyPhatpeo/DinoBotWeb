@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { BOT_LINKS } from "../data/botData";
 import { Github, MessageSquare } from "lucide-react";
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
           {/* Brand Column (Span 2) */}
           <div className="lg:col-span-2 space-y-3">
-            <div className="flex items-center gap-2.5">
+            <Link to="/" className="flex items-center gap-2.5 inline-flex">
               <img
                 src={logo}
                 alt="DinoBot Logo"
@@ -19,87 +20,72 @@ const Footer = () => {
               <span className="text-xl font-black text-white">
                 Dino<span className="text-emerald-400">Bot</span>
               </span>
-            </div>
+            </Link>
 
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
               Bot Discord hỗ trợ quản trị, trò chơi nút bấm và tiện ích máy chủ.
             </p>
-
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] text-slate-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Uptime 99.98%</span>
-            </div>
           </div>
 
-          {/* Feature Links (Text only, clean) */}
+          {/* Navigation Pages */}
+          <div>
+            <h4 className="text-white font-bold text-xs mb-3 tracking-wider uppercase">
+              Các Trang
+            </h4>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <Link to="/" className="hover:text-emerald-400 transition">
+                  Trang Chủ
+                </Link>
+              </li>
+              <li>
+                <Link to="/features" className="hover:text-emerald-400 transition">
+                  Tính Năng
+                </Link>
+              </li>
+              <li>
+                <Link to="/commands" className="hover:text-emerald-400 transition">
+                  Lệnh Bot
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="hover:text-emerald-400 transition">
+                  Hỏi Đáp
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Features direct links */}
           <div>
             <h4 className="text-white font-bold text-xs mb-3 tracking-wider uppercase">
               Tính Năng
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#features" className="hover:text-emerald-400 transition">
-                  Kiểm Duyệt
-                </a>
+                <Link to="/features" className="hover:text-emerald-400 transition">
+                  Kiểm Duyệt Server
+                </Link>
               </li>
               <li>
-                <a href="#features" className="hover:text-emerald-400 transition">
+                <Link to="/features" className="hover:text-emerald-400 transition">
                   Oẳn Tù Tì
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#features" className="hover:text-emerald-400 transition">
-                  Giveaway
-                </a>
+                <Link to="/features" className="hover:text-emerald-400 transition">
+                  Giveaway Tự Động
+                </Link>
               </li>
               <li>
-                <a href="#features" className="hover:text-emerald-400 transition">
+                <Link to="/features" className="hover:text-emerald-400 transition">
                   Quản Lý Role
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Resources Links (Text only, clean) */}
-          <div>
-            <h4 className="text-white font-bold text-xs mb-3 tracking-wider uppercase">
-              Tài Nguyên
-            </h4>
-            <ul className="space-y-2 text-xs">
-              <li>
-                <a href="#commands" className="hover:text-emerald-400 transition">
-                  Danh Sách Lệnh
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-emerald-400 transition">
-                  Câu Hỏi Thường Gặp
-                </a>
-              </li>
-              <li>
-                <a
-                  href={BOT_LINKS.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-emerald-400 transition"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href={BOT_LINKS.support}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-emerald-400 transition"
-                >
-                  Báo Lỗi
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Social Links (Icon + short label) */}
+          {/* External Links */}
           <div>
             <h4 className="text-white font-bold text-xs mb-3 tracking-wider uppercase">
               Liên Hệ
@@ -113,7 +99,7 @@ const Footer = () => {
                   className="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition"
                 >
                   <MessageSquare className="w-4 h-4 text-emerald-400" />
-                  <span>Discord</span>
+                  <span>Discord Hỗ Trợ</span>
                 </a>
               </li>
               <li>
@@ -124,14 +110,14 @@ const Footer = () => {
                   className="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition"
                 >
                   <Github className="w-4 h-4 text-emerald-400" />
-                  <span>GitHub</span>
+                  <span>Mã Nguồn GitHub</span>
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar: Clean single line text */}
+        {/* Bottom Bar */}
         <div className="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <p>
             © {new Date().getFullYear()} DinoBot. Phát triển bởi DuyPhat.

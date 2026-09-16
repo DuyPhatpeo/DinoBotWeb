@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, UserPlus, Menu, X } from "lucide-react";
 import logo from "../assets/logo.png";
 import { BOT_LINKS } from "../data/botData";
 
 const NAV_LINKS = [
-  { name: "Tính Năng", href: "#features" },
-  { name: "Chỉ Số", href: "#stats" },
-  { name: "Lệnh Bot", href: "#commands" },
-  { name: "FAQ", href: "#faq" },
+  { name: "Trang Chủ", path: "/" },
+  { name: "Tính Năng", path: "/features" },
+  { name: "Lệnh Bot", path: "/commands" },
+  { name: "FAQ", path: "/faq" },
 ];
 
 const Navbar = () => {
@@ -17,8 +18,8 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#080B11]/85 border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-        {/* Logo & Brand (No drop-shadow on logo, larger size) */}
-        <a href="#" className="flex items-center gap-3 group">
+        {/* Logo & Brand */}
+        <Link to="/" className="flex items-center gap-3 group">
           <img
             src={logo}
             alt="DinoBot Logo"
@@ -27,22 +28,29 @@ const Navbar = () => {
           <span className="text-2xl font-black tracking-tight text-white group-hover:text-emerald-400 transition-colors">
             Dino<span className="text-emerald-400">Bot</span>
           </span>
-        </a>
+        </Link>
 
-        {/* Desktop Navigation Links: Larger, clear spacing */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop Navigation Links */}
+        <nav className="hidden md:flex items-center gap-2 lg:gap-3">
           {NAV_LINKS.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-semibold text-slate-200 hover:text-emerald-400 hover:bg-white/[0.04] px-3 py-1.5 rounded-xl transition-all"
+            <NavLink
+              key={link.path}
+              to={link.path}
+              end={link.path === "/"}
+              className={({ isActive }) =>
+                `text-sm font-semibold px-4 py-2 rounded-xl transition-all ${
+                  isActive
+                    ? "text-emerald-400 bg-emerald-500/10 border border-emerald-500/25"
+                    : "text-slate-300 hover:text-white hover:bg-white/[0.05]"
+                }`
+              }
             >
               {link.name}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
-        {/* Right Action Buttons: Larger size, prominent and easy to click */}
+        {/* Right Action Buttons */}
         <div className="hidden sm:flex items-center gap-3.5">
           <a
             href={BOT_LINKS.github}
@@ -65,7 +73,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Toggle: Larger buttons */}
+        {/* Mobile Menu Toggle */}
         <div className="flex sm:hidden items-center gap-2.5">
           <a
             href={BOT_LINKS.invite}
@@ -92,17 +100,24 @@ const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="sm:hidden border-b border-slate-800 bg-[#0B0F19] px-6 py-5 space-y-3"
+            className="sm:hidden border-b border-slate-800 bg-[#0B0F19] px-6 py-5 space-y-2"
           >
             {NAV_LINKS.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
+              <NavLink
+                key={link.path}
+                to={link.path}
+                end={link.path === "/"}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-slate-200 hover:text-emerald-400 font-semibold text-base py-2"
+                className={({ isActive }) =>
+                  `block font-semibold text-base py-2 px-3 rounded-lg ${
+                    isActive
+                      ? "text-emerald-400 bg-emerald-500/10"
+                      : "text-slate-300 hover:text-white"
+                  }`
+                }
               >
                 {link.name}
-              </a>
+              </NavLink>
             ))}
             <div className="pt-3 border-t border-slate-800 flex gap-3">
               <a
