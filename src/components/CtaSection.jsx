@@ -22,7 +22,7 @@ const CtaSection = () => {
             <img
               src={logo}
               alt="DinoBot Logo"
-              className="w-16 h-16 sm:w-20 sm:h-20 mx-auto drop-shadow-[0_0_20px_#10b981]"
+              className="w-16 h-16 sm:w-20 sm:h-20 mx-auto"
             />
           </div>
 

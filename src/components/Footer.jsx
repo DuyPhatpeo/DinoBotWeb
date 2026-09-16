@@ -14,7 +14,7 @@ const Footer = () => {
               <img
                 src={logo}
                 alt="DinoBot Logo"
-                className="w-8 h-8 object-contain drop-shadow-[0_0_8px_#10b981]"
+                className="w-8 h-8 object-contain"
               />
               <span className="text-xl font-black text-white">
                 Dino<span className="text-emerald-400">Bot</span>
