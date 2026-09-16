@@ -3,7 +3,7 @@ import Commands from "../components/Commands";
 
 const CommandsPage = () => {
   return (
-    <div className="py-6">
+    <div className="pt-24 pb-12">
       <Commands />
     </div>
   );

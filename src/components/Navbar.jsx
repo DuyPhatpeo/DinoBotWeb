@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, UserPlus, Menu, X } from "lucide-react";
@@ -14,9 +14,24 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#171a21]/90 border-b border-[#2b3042]">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+        isScrolled
+          ? "backdrop-blur-xl bg-[#171a21]/90 border-b border-[#2b3042] shadow-lg shadow-black/25"
+          : "bg-transparent border-b border-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         {/* Logo & Brand */}
         <Link to="/" className="flex items-center gap-3 group">
@@ -30,18 +45,18 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-2 lg:gap-3">
+        {/* Desktop Navigation Links - Jockie Music Style: Clean text-only without background wrappers */}
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.path}
               to={link.path}
               end={link.path === "/"}
               className={({ isActive }) =>
-                `text-sm font-semibold px-4 py-2 rounded-xl transition-all ${
+                `text-sm font-bold uppercase tracking-wider transition-colors duration-200 ${
                   isActive
-                    ? "text-emerald-400 bg-emerald-500/10 border border-emerald-500/25"
-                    : "text-slate-300 hover:text-white hover:bg-white/[0.05]"
+                    ? "text-emerald-400"
+                    : "text-slate-300 hover:text-white"
                 }`
               }
             >
@@ -100,7 +115,7 @@ const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="sm:hidden border-b border-[#2b3042] bg-[#171a21] px-6 py-5 space-y-2"
+            className="sm:hidden border-b border-[#2b3042] bg-[#171a21]/95 backdrop-blur-xl px-6 py-5 space-y-2"
           >
             {NAV_LINKS.map((link) => (
               <NavLink
@@ -109,9 +124,9 @@ const Navbar = () => {
                 end={link.path === "/"}
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `block font-semibold text-base py-2 px-3 rounded-lg ${
+                  `block font-bold text-base py-2.5 px-2 transition-colors ${
                     isActive
-                      ? "text-emerald-400 bg-emerald-500/10 border border-emerald-500/20"
+                      ? "text-emerald-400"
                       : "text-slate-300 hover:text-white"
                   }`
                 }

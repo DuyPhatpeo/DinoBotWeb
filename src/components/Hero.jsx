@@ -7,7 +7,7 @@ import { UserPlus, LifeBuoy, Zap, Github } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center pt-8 pb-16 px-4 sm:px-6 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 overflow-hidden">
       {/* 1. Jockie Music style Watermark Icon Pattern Wallpaper */}
       <div className="absolute inset-0 dino-watermark-pattern pointer-events-none opacity-40 z-0"></div>
 

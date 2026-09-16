@@ -24,7 +24,7 @@ const iconMap = {
 
 const FeaturesPage = () => {
   return (
-    <div className="py-12 px-4 sm:px-6">
+    <div className="pt-28 pb-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 pt-4">
