@@ -24,6 +24,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
@@ -34,7 +38,11 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         {/* Left: Logo & Brand */}
-        <Link to="/" className="flex items-center gap-3 group">
+        <Link
+          to="/"
+          onClick={handleScrollToTop}
+          className="flex items-center gap-3 group cursor-pointer"
+        >
           <img
             src={logo}
             alt="DinoBot Logo"
@@ -52,8 +60,13 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               end={link.path === "/"}
+              onClick={() => {
+                if (link.path === "/") {
+                  handleScrollToTop();
+                }
+              }}
               className={({ isActive }) =>
-                `text-sm font-bold uppercase tracking-wider transition-colors duration-200 ${
+                `text-sm font-bold uppercase tracking-wider transition-colors duration-200 cursor-pointer ${
                   isActive
                     ? "text-emerald-400"
                     : "text-slate-300 hover:text-white"
@@ -101,7 +114,12 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 end={link.path === "/"}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (link.path === "/") {
+                    handleScrollToTop();
+                  }
+                }}
                 className={({ isActive }) =>
                   `block font-bold text-base py-2.5 px-2 transition-colors ${
                     isActive

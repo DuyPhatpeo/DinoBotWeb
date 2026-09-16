@@ -11,7 +11,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
           {/* Brand Column (Span 2) */}
           <div className="lg:col-span-2 space-y-3">
-            <Link to="/" className="flex items-center gap-2.5 inline-flex">
+            <Link
+              to="/"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="flex items-center gap-2.5 inline-flex cursor-pointer"
+            >
               <img
                 src={logo}
                 alt="DinoBot Logo"
@@ -34,7 +38,11 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link to="/" className="hover:text-emerald-400 transition">
+                <Link
+                  to="/"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="hover:text-emerald-400 transition cursor-pointer"
+                >
                   Trang Chủ
                 </Link>
               </li>
