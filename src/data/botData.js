@@ -1,6 +1,6 @@
 export const BOT_LINKS = {
   invite: "https://discord.com/oauth2/authorize?client_id=1382559506885775360",
-  support: "https://discord.gg/FMcRut9kPV",
+  support: "https://discord.gg/p3d7859xFF",
   github: "https://github.com/DuyPhatpeo/DinoBotDiscord",
   repo: "https://github.com/DuyPhatpeo/DinoBotDiscord",
 };
@@ -305,7 +305,7 @@ export const FAQ_DATA = [
   },
   {
     q: "Nếu tôi gặp trục trặc hoặc cần hỗ trợ cấu hình bot thì liên hệ ở đâu?",
-    a: "Bạn có thể tham gia Server Discord Hỗ Trợ chính thức tại https://discord.gg/FMcRut9kPV hoặc tạo Issue trên GitHub để được tác giả hỗ trợ trực tiếp.",
+    a: "Bạn có thể tham gia Server Discord Hỗ Trợ chính thức tại https://discord.gg/p3d7859xFF hoặc tạo Issue trên GitHub để được tác giả hỗ trợ trực tiếp.",
   },
 ];
 
