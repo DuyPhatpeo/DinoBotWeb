@@ -1,75 +1,74 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import { BOT_LINKS } from "../data/botData";
-import { Github, MessageSquare, ExternalLink, Heart, ShieldCheck, Terminal } from "lucide-react";
+import { Github, MessageSquare } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-slate-800/80 bg-[#06080E] text-slate-400 text-sm relative z-10">
-      <div className="max-w-7xl mx-auto px-6 pt-16 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
-          {/* Brand & Mission Column (Span 2) */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
+    <footer className="border-t border-slate-800/80 bg-[#06080E] text-slate-400 text-xs sm:text-sm relative z-10">
+      <div className="max-w-7xl mx-auto px-6 pt-12 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
+          {/* Brand Column (Span 2) */}
+          <div className="lg:col-span-2 space-y-3">
+            <div className="flex items-center gap-2.5">
               <img
                 src={logo}
                 alt="DinoBot Logo"
-                className="w-10 h-10 object-contain drop-shadow-[0_0_10px_#10b981]"
+                className="w-8 h-8 object-contain drop-shadow-[0_0_8px_#10b981]"
               />
-              <span className="text-2xl font-black tracking-tight text-white">
+              <span className="text-xl font-black text-white">
                 Dino<span className="text-emerald-400">Bot</span>
               </span>
             </div>
 
-            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              Bot Discord đa năng toàn diện cho cộng đồng của bạn. Đảm bảo an ninh, gia tăng tương tác và mang lại niềm vui cho mọi thành viên trong máy chủ.
+            <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
+              Bot Discord hỗ trợ quản trị, trò chơi nút bấm và tiện ích máy chủ.
             </p>
 
-            {/* Live Operational Status */}
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Tất cả dịch vụ đang hoạt động (99.98%)</span>
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] text-slate-300">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Uptime 99.98%</span>
             </div>
           </div>
 
-          {/* Quick Links Column */}
+          {/* Feature Links (Text only, clean) */}
           <div>
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wider uppercase">
+            <h4 className="text-white font-bold text-xs mb-3 tracking-wider uppercase">
               Tính Năng
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm">
+            <ul className="space-y-2 text-xs">
               <li>
                 <a href="#features" className="hover:text-emerald-400 transition">
-                  Kiểm Duyệt AutoMod
+                  Kiểm Duyệt
                 </a>
               </li>
               <li>
                 <a href="#features" className="hover:text-emerald-400 transition">
-                  Mini Games & Casino
+                  Oẳn Tù Tì
                 </a>
               </li>
               <li>
                 <a href="#features" className="hover:text-emerald-400 transition">
-                  Kinh Tế & Bảng Xếp Hạng
+                  Giveaway
                 </a>
               </li>
               <li>
                 <a href="#features" className="hover:text-emerald-400 transition">
-                  Quản Lý Vai Trò
+                  Quản Lý Role
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Resources Column */}
+          {/* Resources Links (Text only, clean) */}
           <div>
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wider uppercase">
+            <h4 className="text-white font-bold text-xs mb-3 tracking-wider uppercase">
               Tài Nguyên
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm">
+            <ul className="space-y-2 text-xs">
               <li>
-                <a href="#commands" className="hover:text-emerald-400 transition flex items-center gap-1">
-                  <span>Thư Viện Lệnh</span>
+                <a href="#commands" className="hover:text-emerald-400 transition">
+                  Danh Sách Lệnh
                 </a>
               </li>
               <li>
@@ -82,10 +81,9 @@ const Footer = () => {
                   href={BOT_LINKS.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-emerald-400 transition flex items-center gap-1"
+                  className="hover:text-emerald-400 transition"
                 >
-                  <span>GitHub Repository</span>
-                  <ExternalLink className="w-3 h-3" />
+                  GitHub
                 </a>
               </li>
               <li>
@@ -93,21 +91,20 @@ const Footer = () => {
                   href={BOT_LINKS.support}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-emerald-400 transition flex items-center gap-1"
+                  className="hover:text-emerald-400 transition"
                 >
-                  <span>Báo Lỗi & Góp Ý</span>
-                  <ExternalLink className="w-3 h-3" />
+                  Báo Lỗi
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Social & Support Column */}
+          {/* Social Links (Icon + short label) */}
           <div>
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wider uppercase">
-              Cộng Đồng
+            <h4 className="text-white font-bold text-xs mb-3 tracking-wider uppercase">
+              Liên Hệ
             </h4>
-            <ul className="space-y-3 text-xs sm:text-sm">
+            <ul className="space-y-2.5 text-xs">
               <li>
                 <a
                   href={BOT_LINKS.support}
@@ -116,7 +113,7 @@ const Footer = () => {
                   className="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition"
                 >
                   <MessageSquare className="w-4 h-4 text-emerald-400" />
-                  <span>Discord Hỗ Trợ</span>
+                  <span>Discord</span>
                 </a>
               </li>
               <li>
@@ -127,40 +124,21 @@ const Footer = () => {
                   className="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition"
                 >
                   <Github className="w-4 h-4 text-emerald-400" />
-                  <span>DuyPhatpeo</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={BOT_LINKS.invite}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-2 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold text-xs hover:bg-emerald-500/20 transition"
-                >
-                  + Mời Vào Discord
+                  <span>GitHub</span>
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright & Legal disclaimer */}
-        <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center sm:text-left">
+        {/* Bottom Bar: Clean single line text */}
+        <div className="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <p>
-            © {new Date().getFullYear()} <span className="text-slate-300 font-medium">DinoBot</span>. Phát triển bởi{" "}
-            <a
-              href="https://github.com/DuyPhatpeo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-400 hover:underline font-semibold"
-            >
-              DuyPhat
-            </a>
-            .
+            © {new Date().getFullYear()} DinoBot. Phát triển bởi DuyPhat.
           </p>
 
           <p className="text-[11px] text-slate-600">
-            DinoBot là dự án độc lập, không liên kết hoặc được bảo trợ chính thức bởi Discord Inc.
+            Dự án độc lập, không liên kết chính thức với Discord Inc.
           </p>
         </div>
       </div>

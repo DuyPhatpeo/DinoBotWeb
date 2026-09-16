@@ -4,94 +4,76 @@ import { FEATURE_MODULES } from "../data/botData";
 import {
   ShieldAlert,
   Gamepad2,
-  Coins,
-  UserCheck,
   Sparkles,
+  UserCheck,
   Wrench,
-  CheckCircle2,
-  Zap,
+  Coins,
 } from "lucide-react";
 
 const iconMap = {
   ShieldAlert,
   Gamepad2,
-  Coins,
-  UserCheck,
   Sparkles,
+  UserCheck,
   Wrench,
+  Coins,
 };
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 px-6 relative z-10">
+    <section id="features" className="py-20 px-6 relative z-10">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-400 mb-4">
-            <Zap className="w-3.5 h-3.5" />
-            <span>Giải Pháp Toàn Diện Cho Discord</span>
-          </div>
-
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Tính Năng Nổi Bật Của{" "}
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
-              DinoBot
-            </span>
+        {/* Section Header: Text-focused, minimal */}
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2 block">
+            Tính Năng Cốt Lõi
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
+            Tối Ưu Cho <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Mọi Máy Chủ</span>
           </h2>
-
-          <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-            Thay thế 5+ bot riêng lẻ bằng một bot duy nhất: An toàn, nhanh chóng, trực quan và luôn luôn miễn phí cho mọi máy chủ.
+          <p className="text-slate-400 text-sm sm:text-base">
+            Tập hợp các công cụ quản lý và mini game tương tác chỉ trong một bot duy nhất.
           </p>
         </div>
 
-        {/* Features 6-Pillar Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {FEATURE_MODULES.map((module, idx) => {
             const IconComponent = iconMap[module.iconName] || Sparkles;
             return (
               <motion.div
                 key={module.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`relative group p-7 rounded-3xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between ${module.borderGlow} hover:shadow-[0_0_35px_rgba(16,185,129,0.12)] hover:-translate-y-1`}
+                transition={{ duration: 0.4, delay: idx * 0.08 }}
+                className={`p-6 rounded-3xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between ${module.borderGlow} hover:shadow-lg hover:shadow-emerald-950/20`}
               >
-                {/* Subtle top corner gradient glow */}
-                <div
-                  className={`absolute top-0 right-0 w-36 h-36 bg-gradient-to-br ${module.gradient} rounded-full blur-3xl group-hover:opacity-100 opacity-50 transition-opacity`}
-                ></div>
-
                 <div>
-                  {/* Top Bar: Icon + Category Badge */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 group-hover:bg-emerald-500/20 transition-all duration-300 shadow-sm">
-                      <IconComponent className="w-7 h-7" />
+                  {/* Top Bar: Clean icon + Title (balanced) */}
+                  <div className="flex items-center gap-3.5 mb-4">
+                    <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                      <IconComponent className="w-5 h-5" />
                     </div>
-
-                    <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-800/90 text-emerald-300 border border-emerald-500/20">
-                      {module.badge}
-                    </span>
+                    <h3 className="text-lg font-bold text-white leading-snug">
+                      {module.title}
+                    </h3>
                   </div>
 
-                  {/* Title & Description */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors">
-                    {module.title}
-                  </h3>
-
-                  <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  {/* Short Description */}
+                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-5">
                     {module.desc}
                   </p>
 
-                  {/* Feature Checkpoints */}
-                  <div className="space-y-2.5 pt-4 border-t border-slate-800/60">
+                  {/* Clean Bullet Points: Text with simple bullet dash, no redundant icons */}
+                  <ul className="space-y-2 pt-3 border-t border-slate-800/60 text-xs text-slate-300">
                     {module.bullets.map((bullet, bIdx) => (
-                      <div key={bIdx} className="flex items-start gap-2.5 text-xs text-slate-300">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                      <li key={bIdx} className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/60 flex-shrink-0"></span>
                         <span>{bullet}</span>
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </motion.div>
             );
