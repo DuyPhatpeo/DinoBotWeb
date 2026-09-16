@@ -71,10 +71,10 @@ const Hero = () => {
         >
           {/* Giant Bold Headline */}
           <div className="space-y-1">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white uppercase leading-[1.08]">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white uppercase leading-[1.12] pb-1">
               DINOBOT
             </h1>
-            <div className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-300 bg-clip-text text-transparent uppercase">
+            <div className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-300 bg-clip-text text-transparent uppercase leading-[1.25] pb-2 sm:pb-3">
               BOT DISCORD TOÀN DIỆN
             </div>
           </div>
