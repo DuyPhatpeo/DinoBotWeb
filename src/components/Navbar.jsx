@@ -24,15 +24,9 @@ const Navbar = () => {
             alt="DinoBot Logo"
             className="w-9 h-9 object-contain drop-shadow-[0_0_10px_#10b981] group-hover:scale-105 transition-transform"
           />
-          <div className="flex items-center gap-2">
-            <span className="text-xl font-black tracking-tight text-white group-hover:text-emerald-400 transition-colors">
-              Dino<span className="text-emerald-400">Bot</span>
-            </span>
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              v2.4
-            </span>
-          </div>
+          <span className="text-xl font-black tracking-tight text-white group-hover:text-emerald-400 transition-colors">
+            Dino<span className="text-emerald-400">Bot</span>
+          </span>
         </a>
 
         {/* Desktop Navigation Links */}

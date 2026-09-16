@@ -27,7 +27,7 @@ export const BOT_STATS = [
   {
     label: "Uptime",
     value: "99.98%",
-    change: "24/7/365",
+    change: "Liên tục",
     iconName: "Activity",
   },
 ];
@@ -99,14 +99,14 @@ export const FEATURE_MODULES = [
     borderGlow: "hover:border-cyan-500/40",
   },
   {
-    id: "botengine",
-    title: "Kiến Trúc Node.js",
-    desc: "Xây dựng trên nền tảng discord.js v14 với các Handler xử lý độc lập.",
+    id: "community",
+    title: "Cộng Đồng & Kết Nối",
+    desc: "Gia tăng tương tác giữa các thành viên qua các tiện ích trò chuyện và chia sẻ.",
     bullets: [
-      "Button & SelectMenu Handler riêng biệt",
-      "Tối ưu hiệu năng, phản hồi siêu tốc",
-      "Dễ dàng mở rộng lệnh mới",
-      "Mã nguồn mở trên GitHub",
+      "Gửi thông điệp: /say",
+      "Tra cứu tài khoản người dùng",
+      "Gắn kết các thành viên máy chủ",
+      "Hoạt động ổn định liên tục",
     ],
     iconName: "Coins",
     borderGlow: "hover:border-rose-500/40",

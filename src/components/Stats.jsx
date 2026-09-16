@@ -36,12 +36,8 @@ const Stats = () => {
                   </div>
                 </div>
 
-                <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-1">
+                <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                   {stat.value}
-                </div>
-
-                <div className="text-xs text-emerald-400/90 font-medium">
-                  {stat.change}
                 </div>
               </motion.div>
             );
